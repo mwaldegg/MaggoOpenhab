@@ -1,0 +1,15 @@
+actualTemperature
+humidity
+windowState
+lowbat
+rssiDeviceValue
+vaporAmount
+moistureDetected
+waterlevelDetected
+on
+smokeDetectorAlarmType
+setPointTemperature
+valvePosition
+valveState
+incorrectPositioned
+sabotage
