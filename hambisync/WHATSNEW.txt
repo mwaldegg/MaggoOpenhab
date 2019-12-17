@@ -1,0 +1,51 @@
+19/11/2016
+ - sync.restore option controls if you want to save lamps state before sync and restore it after sync, defaults to true
+
+31/08/2016
+ - updated to the latest Hue SDK and fixed bridge auth
+ - configuration backup is now saved as .bak file (easier restore in case of corruption)
+ - enabled CORS for the web service
+
+06/22/2014
+ - command & control presets (conf/cc-presets), /cc/trigger will execute a preset than can run local file
+   or make HTTP request. Useful when you need to automate something and invoke commands by simple requests from
+   smartphone or other systems. Check help for details and examples.
+ - /cc-ctrl/reload HTTP API to reload presets, returns the number of loaded presets
+ - /cc-ctrl/list HTTP API to list all the command preset triggers with the descriptions
+
+06/21/2014
+ - sync.detect.standby option, disable if sync is stopped on dark scenes
+ - some fixes with saving/loading presets
+
+04/23/2014
+ - /toggle HTTP API, toggles ambilight synchronization (on/off), useful for Android Tasker widget automation
+ - detect standby mode by all zero ambilight values, standby mode has the same effect as tv off mode
+
+04/16/2014
+ - lamp synchronization presets can be changed on the fly now, moved to conf/sync-presets
+ - /sync-preset/load/<name> API request will load conf/sync-presets/<name>.json on the fly
+ - /sync-preset/load/lamps will reload lamps.json without the need to restart the app
+ - last used sync preset name is saved in application.conf and will be reused after restart by default
+ - sync.turn.off.other option: when sync is started, turn off lamps connected to hub,
+   but not configured for ambilight experience
+ - updated algorithm code from Android ambilight+hue app 04/15/2014 release
+
+04/15/2014
+ - /preset/load/<name>/<delay> API command, loads preset after specified delay in milliseconds
+ - /preset returns the last activated preset or null if there was not preset activated via API since app start
+ - /preset/list returns the lise of available presets (conf/presets folder)
+ - don't apply preset if ambilight syncrhonization is active
+ - option to specify lamp "model" in lamps.json:
+   LCT001, LCT002, LCT003, LLC001, LLC005, LLC006, LLC007, LLC011, LLC012, LLC013, LLC014, LLS001, LST001
+
+04/04/2014
+ - better state restore after ambilight synchronization is stopped
+ - state of turned off lamps is saved and restored
+
+03/29/2014
+ - stop sync automatically if TV becomes offline (after tv.max.errors subsequent errors)
+ - ping TV periodically to detect when it becomes online and start sync (tv.retry.interval, sync.resume)
+ - turn off lamps when sync is stopped: sync.lamps.off.on.stop (vs just restoring the previous state, disabled by default)
+ - turn off lamps when TV is not available (becomes offline): sync.lamps.off.on.error, default is true
+ - don't save the state of turned off lamps
+ - better restore after sync stop (try twice as sometimes it doesn't restore for all lamps)

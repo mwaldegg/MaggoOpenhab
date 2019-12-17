@@ -8,6 +8,7 @@ echo $(date)
 
 cat <<EOF > /tmp/hmip2mqtt_keylist
 actualTemperature
+valveActualTemperature
 humidity
 windowState
 lowbat

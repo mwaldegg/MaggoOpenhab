@@ -1,0 +1,31 @@
+{
+    "9": {
+        "right": [2],
+        "left": [0],
+        "brightness": 2,
+        "immersion": 5,
+        "transition": 3
+    },
+    "2": {
+        "right": [0,1,2],
+
+        "brightness": 4,
+        "immersion": 4,
+        "transition": 5
+    },
+    "3": {
+        "left": [0,1,2],
+
+        "brightness": 4,
+        "immersion": 4,
+        "transition": 5
+    },
+    "10": {
+        "right": [2,1],
+        "left": [0,1],
+        "brightness": 4,
+        "immersion": 5,
+        "transition": 3
+    }
+
+}

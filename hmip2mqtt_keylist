@@ -1,4 +1,5 @@
 actualTemperature
+valveActualTemperature
 humidity
 windowState
 lowbat

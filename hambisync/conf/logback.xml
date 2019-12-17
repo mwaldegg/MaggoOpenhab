@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <Pattern>[%d] %m%n</Pattern>
+    </encoder>
+  </appender>
+
+  <appender name="R" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>../logs/hambisync.log</File>
+    <encoder>
+      <Pattern>[%d][%t] %m%n</Pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+      <MinIndex>1</MinIndex>
+      <MaxIndex>5</MaxIndex>
+      <FileNamePattern>../logs/hambisync%i.log.zip</FileNamePattern>
+    </rollingPolicy>
+    <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      <MaxFileSize>1MB</MaxFileSize>
+    </triggeringPolicy>
+  </appender>
+
+  <logger name="ru.org.amip" level="INFO"/>
+
+  <root level="WARN">
+    <appender-ref ref="stdout"/>
+    <appender-ref ref="R"/>
+  </root>
+
+</configuration>

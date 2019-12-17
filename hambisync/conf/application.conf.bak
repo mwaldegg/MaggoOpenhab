@@ -1,0 +1,52 @@
+bridge.username=47-lnYtNWWwmLFHVZV08Xtk2ZJwBCaX5dZa5EKXn
+# set to bridge IP or leave empty to connect to the first discovered bridge
+bridge.ip=192.168.200.198
+
+# set to Philips TV IP address where jointSPACE is available
+tv.ip=192.168.200.186
+
+# if ambilight to hue synchronization should be started automatically when you start the app
+# when set to false, use HTTP API to control it: http://127.0.0.1:4567/start
+sync.autostart=true
+# always turn off the lamps when synchronization is stopped
+sync.lamps.off.on.stop=false
+# turn off lamps when TV is not available, otherwise the last state is restored
+sync.lamps.off.on.error=true
+# when sync is started, turn off lamps connected to hub, but not configured for ambilight experience
+sync.turn.off.other=false
+# resume sync when TV goes back online
+sync.resume=true
+# lamps config to load by default (without .json extension), this will load lamps.json:
+sync.preset=lamps
+# Go to standby mode when Ambilight reports all zero colors (disable if sync turns off on dark screen)
+sync.detect.standby=true
+# Save lamps state before sync and restore it after sync is stopped
+sync.restore=true
+
+# HTTP API address and port, change IP to your machine address that can be accessed from the network
+# Double check the specified port is open on the firewall, open http://web.ip:web.port/ in the browser to verify
+web.ip=192.168.200.153
+web.port=4567
+
+# TV connection timeout in ms
+tv.timeout=5000
+# Maximum number of subsequent errors after which the sync will be stopped (when TV is offline)
+tv.max.errors=5
+# Interval in seconds after which the app will try to start sync again (TV availability ping interval)
+tv.retry.interval=30
+
+
+# you most likely don't need to change anything below this line
+tv.port=1925
+tv.ambi=/6/ambilight/processed
+tv.ambi.layer=layer1
+
+# colors are not updated if the difference between the last set color and the current color (0-255) components is less than
+rgb.offset=30
+
+# query interval in milliseconds, sync is performed only if ambilight color has changed
+sync.interval=40
+# force sync even if color didn't change (milliseconds)
+forced.sync.interval=1500
+# don't hammer the bridge with requests, if you get disconnected from the bridge, increase this delay (milliseconds)
+bridge.update.delay=50
