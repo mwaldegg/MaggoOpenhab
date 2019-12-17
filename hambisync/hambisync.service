@@ -1,0 +1,14 @@
+[Unit]
+Description=HambiSync - Philips TV Hue Sync
+After=network-online.target
+ 
+[Service]
+ExecStart=/bin/sh /home/openhabian/MaggoOpenhab/hambisync/bin/hambisync.sh
+WorkingDirectory=/home/openhabian/MaggoOpenhab/hambisync
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=openhabian
+ 
+[Install]
+WantedBy=multi-user.target

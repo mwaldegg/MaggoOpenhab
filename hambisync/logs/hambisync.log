@@ -5021,3 +5021,19 @@
 [2019-12-17 20:58:49,923][Timer-17] Sync stopped
 [2019-12-17 20:58:54,419][Timer-18] Sync started
 [2019-12-17 20:58:54,420][Timer-18] Saving current lamps state...
+[2019-12-17 21:13:52,296][main] ---- HAmbiSync v1.0 beta (built: 11/19/2016 11:40:26) startup ----
+[2019-12-17 21:13:52,514][main] Loaded 4 lamps from ../conf/sync-presets/lamps.json
+[2019-12-17 21:13:52,519][main] Ambilight TV URL: http://192.168.200.186:1925/6/ambilight/processed
+[2019-12-17 21:13:54,326][Thread-4] Connected to bridge: 192.168.200.198 [47-lnYtNWWwmLFHVZV08Xtk2ZJwBCaX5dZa5EKXn]
+[2019-12-17 21:13:54,353][Timer-2] Checking for ambilight data at http://192.168.200.186:1925/6/ambilight/processed
+[2019-12-17 21:13:54,611][Timer-2] TV is not available, will try to ping it again in 30 seconds
+[2019-12-17 21:14:24,614][Timer-4] Checking for ambilight data at http://192.168.200.186:1925/6/ambilight/processed
+[2019-12-17 21:14:33,515][Thread-0] ---- HAmbiSync v1.0 beta shutdown ----
+[2019-12-17 21:14:39,085][main] ---- HAmbiSync v1.0 beta (built: 11/19/2016 11:40:26) startup ----
+[2019-12-17 21:14:39,278][main] Loaded 4 lamps from ../conf/sync-presets/lamps.json
+[2019-12-17 21:14:39,282][main] Ambilight TV URL: http://192.168.200.186:1925/6/ambilight/processed
+[2019-12-17 21:14:40,983][Thread-4] Connected to bridge: 192.168.200.198 [47-lnYtNWWwmLFHVZV08Xtk2ZJwBCaX5dZa5EKXn]
+[2019-12-17 21:14:41,011][Timer-2] Checking for ambilight data at http://192.168.200.186:1925/6/ambilight/processed
+[2019-12-17 21:14:41,229][Timer-2] TV is not available, will try to ping it again in 30 seconds
+[2019-12-17 21:15:11,232][Timer-4] Checking for ambilight data at http://192.168.200.186:1925/6/ambilight/processed
+[2019-12-17 21:15:11,393][Timer-4] TV is not available, will try to ping it again in 30 seconds
