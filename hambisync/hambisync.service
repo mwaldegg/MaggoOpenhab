@@ -7,6 +7,7 @@ ExecStart=/bin/sh /home/openhabian/MaggoOpenhab/hambisync/bin/hambisync.sh
 WorkingDirectory=/home/openhabian/MaggoOpenhab/hambisync
 StandardOutput=inherit
 StandardError=inherit
+KillMode=mixed
 Restart=always
 User=openhabian
  
